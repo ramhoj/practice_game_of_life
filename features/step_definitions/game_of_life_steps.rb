@@ -1,5 +1,5 @@
 Given /^the following setup$/ do |table|
-  Grid.new([table.headers] + table.rows)
+  Board.new([table.headers] + table.rows)
 end
 
 When /^I evolve the board$/ do

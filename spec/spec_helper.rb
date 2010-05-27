@@ -1,7 +1,6 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'game_of_life'
-require 'grid'
+Dir.glob(File.join(File.dirname(__FILE__), '..', 'lib', '*')).each { |file| require file }
 require 'spec'
 require 'spec/autorun'
 

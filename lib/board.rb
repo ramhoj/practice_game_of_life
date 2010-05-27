@@ -1,4 +1,4 @@
-class Grid
+class Board
   def initialize(grid)
   end
 end
