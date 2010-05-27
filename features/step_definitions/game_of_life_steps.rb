@@ -1,11 +1,15 @@
 Given /^the following setup$/ do |table|
-  Board.new([table.headers] + table.rows)
+  @board = Board.new([table.headers] + table.rows)
 end
 
 When /^I evolve the board$/ do
-  pending # express the regexp above with the code you wish you had
+  @board.evolve
 end
 
 Then /^the center cell should be dead$/ do
-  pending # express the regexp above with the code you wish you had
+  @board.grid[1][1].should == "."
+end
+
+Then /^the center cell should be alive$/ do
+  @board.grid[1][1].should == "x"
 end
